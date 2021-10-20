@@ -1,0 +1,20 @@
+<H1> Iniciar sesion</H1>
+<div class="row" align="center">
+<form>
+    <div>
+          <label> Usuario:</label>
+          <input name="usuario" type="text" ([ngModel])="usuario.usuario">
+    </div>
+    <br>
+    <div>
+        <label> Password:</label>
+        <input name="pass" type="password" ([ngModel])="usuario.pass">
+    </div>
+    <input type="button" value="Aceptar" (click)="loguear()">
+    <div>
+        <a routerLink="/registrar">Crear Cuenta</a>
+    </div>
+    
+</form>
+</div>
+
