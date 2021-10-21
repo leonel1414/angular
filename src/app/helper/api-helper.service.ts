@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { Injectable } from '@angular/core';
 import { observable, Observable } from 'rxjs';
 import { Mensaje } from '../Clase/mensaje';
@@ -22,5 +23,9 @@ export class ApiHelperService {
   }
   TraerMensajes(id: number, token: string, idDestino: number) {
      return <Observable<Mensaje[]>> (this.http.post(this.Api + 'Mensaje/traerTodos'+id+'/'+idDestino,JSON.stringify({token:token})));    
+  }
+  ingresar(usuario:Usuario):Observable<Usuario> {
+    return <Observable<Usuario[]>>(this.http.post(this.Api + '/Usuario/crear', JSON.stringify(usuario));
+    
   }
 }

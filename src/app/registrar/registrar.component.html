@@ -4,21 +4,21 @@
         <form>
             <div>
                 <label > Usuario</label>
-            <input type="text" name="usuario">
+            <input type="text" name="usuario"  ([ngModel])="usuario.usuario">
             </div>
             <div>
                 <label > Nombre</label>
-            <input type="text" name="nombre">
+            <input type="text" name="nombre" ([ngModel])="usuario.nombre">
             </div>
             <div>
                 <label > Apellido</label>
-            <input type="text" name="apellido">
+            <input type="text" name="apellido" ([ngModel])="usuario.apellido">
             </div>
             <div>
                 <label > Password</label>
-            <input type="text" name="password">
+            <input type="text" name="password" ([ngModel])="usuario.pass">
             </div>
-            <input type="button" value="Agregar">
+            <input type="button" value="Agregar" (click)="ingresar()">
         </form>
     </div>
    
